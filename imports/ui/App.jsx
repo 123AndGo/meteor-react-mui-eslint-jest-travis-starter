@@ -22,7 +22,7 @@ function App() {
       </AppBar>
       <Toolbar />
       <Container maxWidth="sm">
-        <Typography variant="h4" gutterBottom>Hello World</Typography>
+        <Typography variant="h4" gutterBottom id="hello-message">Hello World</Typography>
         <Paper
           sx={{
             position: 'fixed', bottom: 0, left: 0, right: 0,

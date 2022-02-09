@@ -26,6 +26,6 @@ describe('Hello-X App', () => {
     act(() => {
       render(<App />, container);
     });
-    expect(container.textContent).toBe('Hello World');
+    expect(document.getElementById('hello-message').textContent).toBe('Hello World');
   });
 });
