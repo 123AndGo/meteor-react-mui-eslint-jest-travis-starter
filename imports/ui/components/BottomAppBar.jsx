@@ -6,7 +6,7 @@ import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import HistoryIcon from '@mui/icons-material/History';
 
 function BottomAppBar() {
-  const [navBarItem, setValue] = useState(0);
+  const [navBarItem, setNavBarItem] = useState(0);
 
   return (
     <Paper
@@ -19,7 +19,7 @@ function BottomAppBar() {
         showLabels
         value={navBarItem}
         onChange={(event, newValue) => {
-          setValue(newValue);
+          setNavBarItem(newValue);
         }}
       >
         <BottomNavigationAction label="Hello" icon={<EmojiPeopleIcon />} />

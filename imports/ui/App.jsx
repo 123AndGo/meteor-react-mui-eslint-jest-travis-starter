@@ -1,20 +1,26 @@
-import React, { lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import PropTypes from 'prop-types';
 
-import AppContainer from './AppContainer.jsx';
+import { Container } from '@mui/material';
 
-const HelloPage = lazy(() => import('./pages/HelloPage.jsx'));
-const HistoryPage = lazy(() => import('./pages/HistoryPage.jsx'));
+import TopAppBar from './components/TopAppBar.jsx';
+import BottomAppBar from './components/BottomAppBar.jsx';
 
-function App() {
+function App({ page }) {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<AppContainer page={<HelloPage />} />} />
-        <Route path="/history" element={<AppContainer page={<HistoryPage />} />} />
-      </Routes>
-    </Router>
+    <>
+      <TopAppBar />
+      <Container maxWidth="sm">
+        <Suspense fallback={<div>Loading...</div>}>
+          {page}
+        </Suspense>
+      </Container>
+      <BottomAppBar />
+    </>
   );
 }
+
+App.propTypes = { page: PropTypes.element };
+App.defaultProps = { page: <div /> };
 
 export default App;
