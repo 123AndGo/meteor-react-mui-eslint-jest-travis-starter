@@ -17,6 +17,12 @@ function HelloPage() {
     event.preventDefault();
     setShowMessage(true);
     setDisplayName(name.trim() || 'World');
+
+    if (!name.trim()) return;
+
+    Meteor.call('names.insert', name.trim());
+
+    setName('');
   };
 
   return (
