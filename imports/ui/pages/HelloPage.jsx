@@ -27,6 +27,10 @@ function HelloPage() {
     setName('');
   };
 
+  const handleEnterKeyPress = (event) => {
+    if (event.key === 'Enter') { handleNameSubmit(event); }
+  };
+
   return (
     <Grid container spacing={2} direction="column">
       <Grid item container spacing={2} alignItems="center">
@@ -37,6 +41,8 @@ function HelloPage() {
             variant="standard"
             value={name}
             onChange={handleNameChange}
+            onKeyPress={handleEnterKeyPress}
+            autoFocus
             id="name-input-field"
           />
         </Grid>
