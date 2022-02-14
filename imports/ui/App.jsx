@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 
-import { Container } from '@mui/material';
+import { Container, Toolbar } from '@mui/material';
 
 import TopAppBar from './components/TopAppBar.jsx';
 import BottomAppBar from './components/BottomAppBar.jsx';
@@ -15,6 +15,7 @@ function App({ page }) {
           {page}
         </Suspense>
       </Container>
+      <Toolbar />
       <BottomAppBar />
     </>
   );

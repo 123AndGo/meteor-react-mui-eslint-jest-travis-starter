@@ -7,6 +7,13 @@ import { act } from 'react-dom/test-utils';
 
 import HistoryPage from '../pages/HistoryPage.jsx';
 
+jest.mock('meteor/react-meteor-data', () => ({
+  useTracker: () => ({
+    names: [{ _id: 'id1', text: 'Test1' }, { _id: 'id2', text: 'Test2' }],
+    isLoading: false,
+  }),
+}));
+
 let container = null;
 beforeEach(() => {
   // setup a DOM element as a render target
@@ -22,10 +29,11 @@ afterEach(() => {
 });
 
 describe('History Page', () => {
-  it('Should render "Coming soon..."', () => {
+  it("Should display the list of greeted user names as 'Hello X' where X is the user's name", () => {
     act(() => {
       render(<HistoryPage />, container);
     });
-    expect(document.getElementById('history').textContent).toBe('Coming soon...');
+    expect(document.getElementById('id1').textContent).toBe('Hello Test1');
+    expect(document.getElementById('id2').textContent).toBe('Hello Test2');
   });
 });

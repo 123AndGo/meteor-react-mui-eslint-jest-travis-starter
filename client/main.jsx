@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import '../imports/api/namesMethods';
 
 import React, { lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
