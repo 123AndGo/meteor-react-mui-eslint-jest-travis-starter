@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+
 import {
   Button, Grid, TextField, Typography,
 } from '@mui/material';
