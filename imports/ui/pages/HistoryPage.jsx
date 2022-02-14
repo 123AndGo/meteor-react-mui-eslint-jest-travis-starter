@@ -20,12 +20,12 @@ function HistoryPage() {
   return (
     <Grid container spacing={2} direction="column">
       <Grid item>
-        <Typography variant="h5" gutterBottom id="history">Last Greetings:</Typography>
+        <Typography variant="h5" gutterBottom id="history-message">Last Greetings:</Typography>
       </Grid>
       {isLoading && <Grid item><div>Loading...</div></Grid>}
       {names.map((name) => (
-        <Grid item key={name._id}>
-          <Typography variant="body" gutterBottom id="history">{`Hello ${name.text}`}</Typography>
+        <Grid item key={name._id} id={name._id}>
+          <Typography variant="body" gutterBottom>{`Hello ${name.text}`}</Typography>
         </Grid>
       ))}
     </Grid>
