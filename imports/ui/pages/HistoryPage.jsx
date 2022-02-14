@@ -14,7 +14,7 @@ function HistoryPage() {
 
     if (!handler.ready()) { return { names: [], isLoading: true }; }
 
-    return { names: NamesCollection.find({}, { sort: { createdAt: -1 } }).fetch() };
+    return { names: NamesCollection.find({}, { sort: { createdAt: -1 }, limit: 20 }).fetch() };
   });
 
   return (
