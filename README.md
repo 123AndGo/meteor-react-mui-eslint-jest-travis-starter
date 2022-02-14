@@ -22,6 +22,7 @@ Hello X uses the following technologies:
 - React Router - For client side routing
 - Material UI - As the React's UI toolkit (styled and functionally-rich components)
 - Git - For version control
+- ESLint - For linting
 - Jest - For front-end testing
 - Travis CI - For Continuous Integration
 
@@ -33,6 +34,7 @@ The app also has the following characteristics:
 - Real-time data updating, using Meteor's DDP protocol implementation
 - Option to extend the app to hybrid mobile apps with a single command (see Meteor's mobile guide)
 - A free one command deployment option to Meteor's Galaxy cloud platform (not recommended for production)
+- Code linting using Airbnb's style guide
 
 And of course Hello X itself is open source with a [public repository] on GitHub.
 
