@@ -4,7 +4,7 @@
 
 Hello X is a simple app that can be used to quickly kickstart a scalable "full stack" web and/or hybrid mobile app.
 
-- Users type their name and the apps greets them "Hello X", with X as each of their names
+- Users type their name and the app greets them "Hello X", with X as each of their names
 - If the users don't type anything, the app greets "Hello World"
 - Users can see the "last greetings" history page, with real-time updates
 
@@ -55,8 +55,8 @@ MIT
 [See it in action]: <https://hello-x.meteorapp.com>
 [public repository]: <https://github.com/123AndGo/hello-x-sample-app>
 
-[build-shield]: https://app.travis-ci.com/123AndGo/hello-x-sample-app.svg?branch=master
-[build-url]: https://app.travis-ci.com/123AndGo/hello-x-sample-app
+[build-shield]: https://app.travis-ci.com/123AndGo/meteor-react-mui-eslint-jest-travis-starter.svg?branch=master
+[build-url]: https://app.travis-ci.com/123AndGo/meteor-react-mui-eslint-jest-travis-starter
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/123AndGo/hello-x-sample-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
